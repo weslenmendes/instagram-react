@@ -1,19 +1,20 @@
 import React from "react";
+import Icon from "./Icon";
 
 function Logo() {
   return (
     <React.Fragment>
       <div className="logo">
-        <ion-icon name="logo-instagram"></ion-icon>
+        <Icon name="logo-instagram" />
         <div className="separador"></div>
         <img src="assets/img/logo.png" alt="" />
       </div>
 
       <div className="logo-mobile">
-        <ion-icon name="logo-instagram"></ion-icon>
+        <Icon name="logo-instagram" />
       </div>
 
-      <div class="instagram-mobile">
+      <div className="instagram-mobile">
         <img src="assets/img/logo.png" alt="" />
       </div>
     </React.Fragment>

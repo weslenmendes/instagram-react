@@ -1,6 +1,6 @@
 import Logo from "./Logo";
 import SearchBar from "./SearchBar";
-import Icons from "./Icons";
+import NavMenu from "./NavMenu";
 
 function Navbar() {
   return (
@@ -8,7 +8,7 @@ function Navbar() {
       <div className="container">
         <Logo />
         <SearchBar />
-        <Icons />
+        <NavMenu />
       </div>
     </div>
   );
