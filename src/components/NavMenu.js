@@ -1,5 +1,4 @@
-import React from "react";
-import Icon from "./Icon";
+import { Icon } from "./Icon";
 
 const iconsName = [
   "paper-plane-outline",
@@ -8,9 +7,9 @@ const iconsName = [
   "person-outline",
 ];
 
-function NavMenu() {
+const NavMenu = () => {
   return (
-    <React.Fragment>
+    <>
       <div className="icones">
         {iconsName.map((name, index) => (
           <Icon key={index} name={name} />
@@ -20,8 +19,8 @@ function NavMenu() {
       <div className="icones-mobile">
         <Icon name="paper-plane-outline" />
       </div>
-    </React.Fragment>
+    </>
   );
-}
+};
 
-export default NavMenu;
+export { NavMenu };

@@ -1,13 +1,13 @@
-function User(props) {
+const User = ({ avatar, username, name }) => {
   return (
     <div className="usuario">
-      <img src={props.image} alt="" />
+      <img src={avatar} alt="" />
       <div className="texto">
-        <strong>{props.username}</strong>
-        {props.name}
+        <strong>{username}</strong>
+        {name}
       </div>
     </div>
   );
-}
+};
 
-export default User;
+export { User };

@@ -1,8 +1,8 @@
-import Logo from "./Logo";
-import SearchBar from "./SearchBar";
-import NavMenu from "./NavMenu";
+import { Logo } from "./Logo";
+import { SearchBar } from "./SearchBar";
+import { NavMenu } from "./NavMenu";
 
-function Navbar() {
+const Navbar = () => {
   return (
     <div className="navbar">
       <div className="container">
@@ -12,6 +12,6 @@ function Navbar() {
       </div>
     </div>
   );
-}
+};
 
-export default Navbar;
+export { Navbar };

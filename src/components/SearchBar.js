@@ -1,9 +1,9 @@
-function SearchBar() {
+const SearchBar = () => {
   return (
     <div className="pesquisa">
       <input type="text" placeholder="Pesquisar" />
     </div>
   );
-}
+};
 
-export default SearchBar;
+export { SearchBar };

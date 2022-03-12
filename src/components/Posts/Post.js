@@ -1,4 +1,4 @@
-import Icon from "./Icon";
+import { Icon } from "../Icon";
 
 const actionIcon = [
   "heart-outline",
@@ -6,30 +6,30 @@ const actionIcon = [
   "paper-plane-outline",
 ];
 
-function showContent(type, content) {
-  if (type === "video") {
-    return (
-      <video width="100%" autoPlay muted loop>
-        <source src={content[0]} type="video/mp4" />
-        <source src={content[1]} type="video/ogg" />
-        Your browser does not support the video tag.
-      </video>
-    );
-  } else {
-    return <img src={content} alt="" />;
-  }
-}
-
-function Post(props) {
+const Post = (props) => {
   const {
     username,
     avatar,
-    type,
+    typeOfContent,
     content,
     avatarLastUserLike,
     nameOfLastUserLike,
     numberOfLikes,
   } = props;
+
+  const showImageOrVideo = (type, content) => {
+    if (type === "video") {
+      return (
+        <video width="100%" autoPlay muted loop>
+          <source src={content[0]} type="video/mp4" />
+          <source src={content[1]} type="video/ogg" />
+          Your browser does not support the video tag.
+        </video>
+      );
+    } else {
+      return <img src={content} alt="" />;
+    }
+  };
 
   return (
     <div className="post">
@@ -43,7 +43,7 @@ function Post(props) {
         </div>
       </div>
 
-      <div className="conteudo">{showContent(type, content)}</div>
+      <div className="conteudo">{showImageOrVideo(typeOfContent, content)}</div>
 
       <div className="fundo">
         <div className="acoes">
@@ -67,6 +67,6 @@ function Post(props) {
       </div>
     </div>
   );
-}
+};
 
-export default Post;
+export { Post };

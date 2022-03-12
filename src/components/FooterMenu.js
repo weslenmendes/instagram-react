@@ -1,4 +1,4 @@
-import Icon from "./Icon";
+import { Icon } from "./Icon";
 
 const iconsName = [
   "home",
@@ -8,7 +8,7 @@ const iconsName = [
   "person-outline",
 ];
 
-function FooterMenu() {
+const FooterMenu = () => {
   return (
     <div className="fundo-mobile">
       {iconsName.map((name, index) => (
@@ -16,6 +16,6 @@ function FooterMenu() {
       ))}
     </div>
   );
-}
+};
 
-export default FooterMenu;
+export { FooterMenu };
