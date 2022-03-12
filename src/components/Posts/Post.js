@@ -10,24 +10,25 @@ const Post = (props) => {
   const {
     username,
     avatar,
-    typeOfContent,
     content,
     avatarLastUserLike,
     nameOfLastUserLike,
     numberOfLikes,
   } = props;
 
-  const showImageOrVideo = (type, content) => {
+  const showImageOrVideo = (content) => {
+    const { type, url } = content;
+
     if (type === "video") {
       return (
         <video width="100%" autoPlay muted loop>
-          <source src={content[0]} type="video/mp4" />
-          <source src={content[1]} type="video/ogg" />
+          <source src={url[0]} type="video/mp4" />
+          <source src={url[1]} type="video/ogg" />
           Your browser does not support the video tag.
         </video>
       );
     } else {
-      return <img src={content} alt="" />;
+      return <img src={url} alt="" />;
     }
   };
 
@@ -35,7 +36,7 @@ const Post = (props) => {
     <div className="post">
       <div className="topo">
         <div className="usuario">
-          <img src={avatar} alt="" />
+          <img src={avatar} alt={username} />
           {username}
         </div>
         <div className="acoes">
@@ -43,7 +44,7 @@ const Post = (props) => {
         </div>
       </div>
 
-      <div className="conteudo">{showImageOrVideo(typeOfContent, content)}</div>
+      <div className="conteudo">{showImageOrVideo(content)}</div>
 
       <div className="fundo">
         <div className="acoes">
@@ -58,7 +59,7 @@ const Post = (props) => {
         </div>
 
         <div className="curtidas">
-          <img src={avatarLastUserLike} alt="" />
+          <img src={avatarLastUserLike} alt={nameOfLastUserLike} />
           <div className="texto">
             Curtido por <strong>{nameOfLastUserLike}</strong> e{" "}
             <strong>outras {numberOfLikes} pessoas</strong>

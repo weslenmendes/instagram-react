@@ -8,12 +8,11 @@ const Posts = () => {
       {posts.map((post) => (
         <Post
           key={post.id}
-          username={post.username}
-          avatar={post.avatar}
-          typeOfContent={post.type}
+          username={post.user.username}
+          avatar={post.user.avatar}
           content={post.content}
-          avatarLastUserLike={post.avatarLastUserLike}
-          nameOfLastUserLike={post.nameOfLastUserLike}
+          avatarLastUserLike={post.lastUserLike.avatar}
+          nameOfLastUserLike={post.lastUserLike.username}
           numberOfLikes={post.numberOfLikes}
         />
       ))}
