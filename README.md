@@ -1,4 +1,6 @@
-# Instagram React
+<h1 align="center">
+  <img align="center" width="4%" src="public/assets/favicon.png" /> Instagram React
+</h1>
 
 ![instagram-react](https://user-images.githubusercontent.com/62858747/158065224-67c55fdb-90df-4cef-90b3-30ee5a968e2d.gif)
 
@@ -50,7 +52,7 @@ npm start
 yarn start
 ```
 
-4. Após executar o projeto, abrirá uma aba em seu navegador padrão com ele.
+4. Após executar o projeto, abrirá uma aba com o mesmo em seu navegador padrão.
 
 ---
 
